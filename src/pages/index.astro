@@ -1,11 +1,51 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/atoms/Badge.astro";
+import LinkedinIcon from "../components/atoms/icons/LinkedinIcon.astro";
+import GithubIcon from "../components/atoms/icons/GithubIcon.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-	<h1>Portfoilio</h1>
-	</main>
-</Layout>
+<Layout title="Pedro Rodríguez">
+  <main>
+    <section class="w-full mx-auto lg:w-[740px] py-44">
+      <img
+        class="rounded-full w-20 h-20 object-cover mb-4"
+        src="/public/images/Main.jpg"
+        alt="Pedro photo"
+      />
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+        Hey, soy Pedro <div class="flex justify-center items-center">
+          <a
+            href="https://www.linkedin.com/in/pedro-rodriguez-albiach-3066222a2/"
+            target="_blank"
+            class="flex justify-center items-center"
+            rel="noopener"
+          >
+            <Badge>Disponible para trabajar</Badge></a
+          >
+        </div>
+      </h1>
+      <h2 class="text-xl opacity-80 text-wrap">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean volutpat
+        laoreet libero, sit amet dignissim eros laoreet id. Quisque dapibus
+        libero tempus sem auctor, eu bibendum velit suscipit. Sed ultrices
+        sapien vitae nisl imperdiet fermentum. Donec condimentum ullamcorper
+        metus nec condimentum.
+      </h2>
+      <ul>
+        <li>
+          <a
+            class="flex w-8 h-8"
+            href="https://www.linkedin.com/in/pedro-rodriguez-albiach-3066222a2/"
+            ><LinkedinIcon /></a
+          >
+        </li>
+        <li>
+          <a class="flex w-8 h-8" href="/"><GithubIcon /></a>
 
+          <li></li>
+        </li>
+      </ul>
+    </section>
+  </main>
+</Layout>
