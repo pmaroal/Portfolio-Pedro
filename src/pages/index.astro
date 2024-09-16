@@ -3,13 +3,15 @@ import Layout from "../layouts/Layout.astro";
 import Badge from "../components/atoms/Badge.astro";
 import LinkedinIcon from "../components/atoms/icons/LinkedinIcon.astro";
 import GithubIcon from "../components/atoms/icons/GithubIcon.astro";
+import SocialPill from "../components/molecules/SocialPill.astro";
+import MailIcon from "../components/atoms/icons/MailIcon.astro";
 ---
 
 <Layout title="Pedro Rodríguez">
   <main>
     <section class="w-full mx-auto lg:w-[740px] py-44">
       <img
-        class="rounded-full w-20 h-20 object-cover mb-4"
+        class="rounded-full w-20 h-20 object-cover mb-4 hover:scale-150 transition"
         src="/public/images/Main.jpg"
         alt="Pedro photo"
       />
@@ -32,20 +34,20 @@ import GithubIcon from "../components/atoms/icons/GithubIcon.astro";
         sapien vitae nisl imperdiet fermentum. Donec condimentum ullamcorper
         metus nec condimentum.
       </h2>
-      <ul>
-        <li>
-          <a
-            class="flex w-8 h-8"
-            href="https://www.linkedin.com/in/pedro-rodriguez-albiach-3066222a2/"
-            ><LinkedinIcon /></a
-          >
-        </li>
-        <li>
-          <a class="flex w-8 h-8" href="/"><GithubIcon /></a>
 
-          <li></li>
-        </li>
-      </ul>
+      <!-- Links -->
+      <nav class="flex gap-x-4 py-4">
+        <SocialPill
+          href="https://www.linkedin.com/in/pedro-rodriguez-albiach-3066222a2/"
+          ><LinkedinIcon class="w-6 h-6" />Linkedin</SocialPill
+        >
+        <SocialPill href="https://github.com/pmaroal"
+          ><GithubIcon class="w-6 h-6" />GitHub</SocialPill
+        >
+        <SocialPill href="https://github.com/pmaroal"
+          ><MailIcon class="w-6 h-6" />Mail</SocialPill
+        >
+      </nav>
     </section>
   </main>
 </Layout>
