@@ -15,21 +15,21 @@ import SectionContainer from "../components/atoms/SectionContainer.astro";
 >
   <main>
     <!-- First section -->
-    <SectionContainer class="py-44 pb-24">
+    <SectionContainer id="about" class="py-44 pb-24">
       <img
         class="rounded-full size-20 object-cover mb-4 hover:scale-110 transition"
         src="/public/images/Pedro_portfolio.jpg"
         alt="Pedro photo"
       />
       <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
-        Hey, soy Pedro <div class="flex justify-center items-center">
+        Hey, I'm Pedro <div class="flex justify-center items-center">
           <a
             href="https://www.linkedin.com/in/pedro-rodriguez-albiach-3066222a2/"
             target="_blank"
             class="flex justify-center items-center"
             rel="noopener"
           >
-            <Badge>Disponible para trabajar</Badge></a
+            <Badge>Available to work</Badge></a
           >
         </div>
       </h1>
@@ -56,7 +56,8 @@ import SectionContainer from "../components/atoms/SectionContainer.astro";
       </nav>
     </SectionContainer>
     <!-- Second section -->
-    <SectionContainer>
+    <SectionContainer id="experience" class="gap-10 flex flex-col">
+      <h2 class="text-3xl font-bold">Experience</h2>
       <Experience />
     </SectionContainer>
   </main>
