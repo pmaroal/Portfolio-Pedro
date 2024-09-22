@@ -7,6 +7,7 @@ import SocialPill from "../components/molecules/SocialPill.astro";
 import MailIcon from "../components/atoms/icons/MailIcon.astro";
 import Experience from "../components/molecules/Experience.astro";
 import SectionContainer from "../components/atoms/SectionContainer.astro";
+import ExperienceIcon from "../components/atoms/icons/ExperienceIcon.astro.astro";
 ---
 
 <Layout
@@ -57,7 +58,9 @@ import SectionContainer from "../components/atoms/SectionContainer.astro";
     </SectionContainer>
     <!-- Second section -->
     <SectionContainer id="experience" class="gap-10 flex flex-col">
-      <h2 class="text-3xl font-bold">Experience</h2>
+      <h2 class="text-3xl font-bold flex flex-row gap-4 items-center">
+        <ExperienceIcon /> Experience
+      </h2>
       <Experience />
     </SectionContainer>
   </main>
