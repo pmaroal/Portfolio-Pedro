@@ -1,0 +1,38 @@
+---
+import Card from "../atoms/Card.astro";
+
+const PROJECTS = [
+  {
+    href: "https://adaptasocios.com/",
+    image: "/public/images/contributions/AdaptaSocios.png",
+    title: "Marketec360",
+    description:
+      "Company internships related to the higher level training cycle ‘multiplatform application development’, carrying out web development work for companies in various fields.",
+  },
+  {
+    href: "https://calerosailingteam.com/es",
+    image: "/public/images/contributions/Calero.png",
+    title: "Marketec360",
+    description:
+      "Company internships related to the higher level training cycle ‘multiplatform application development’, carrying out web development work for companies in various fields.",
+  },
+  {
+    href: "https://calerosailingteam.com/es",
+    image: "/public/images/contributions/Calero.png",
+    title: "Marketec360",
+    description:
+      "Company internships related to the higher level training cycle ‘multiplatform application development’, carrying out web development work for companies in various fields.",
+  },
+  {
+    href: "https://calerosailingteam.com/es",
+    image: "/public/images/contributions/Calero.png",
+    title: "Marketec360",
+    description:
+      "Company internships related to the higher level training cycle ‘multiplatform application development’, carrying out web development work for companies in various fields.",
+  },
+];
+---
+
+<div class="flex flex-wrap gap-6 justify-center">
+  {PROJECTS.map((project) => <Card {...project} />)}
+</div>

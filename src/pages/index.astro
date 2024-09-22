@@ -8,6 +8,9 @@ import MailIcon from "../components/atoms/icons/MailIcon.astro";
 import Experience from "../components/molecules/Experience.astro";
 import SectionContainer from "../components/atoms/SectionContainer.astro";
 import ExperienceIcon from "../components/atoms/icons/ExperienceIcon.astro.astro";
+import ProjectsIcon from "../components/atoms/icons/ProjectsIcon.astro";
+import Footer from "../components/atoms/Footer.astro";
+import ProjectsCards from "../components/molecules/ProjectsCards.astro";
 ---
 
 <Layout
@@ -17,33 +20,36 @@ import ExperienceIcon from "../components/atoms/icons/ExperienceIcon.astro.astro
   <main>
     <!-- First section -->
     <SectionContainer id="about" class="py-44 pb-24">
-      <img
-        class="rounded-full size-20 object-cover mb-4 hover:scale-110 transition"
-        src="/public/images/Pedro_portfolio.jpg"
-        alt="Pedro photo"
-      />
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
-        Hey, I'm Pedro <div class="flex justify-center items-center">
-          <a
-            href="https://www.linkedin.com/in/pedro-rodriguez-albiach-3066222a2/"
-            target="_blank"
-            class="flex justify-center items-center"
-            rel="noopener"
-          >
-            <Badge>Available to work</Badge></a
-          >
+      <div class="flex gap-4 w-fit">
+        <div class="flex flex-col w-full max-w-[500px]">
+          <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+            Hey, I'm Pedro <div class="flex justify-center items-center">
+              <a
+                href="https://www.linkedin.com/in/pedro-rodriguez-albiach-3066222a2/"
+                target="_blank"
+                class="flex justify-center items-center"
+                rel="noopener"
+              >
+                <Badge>Available to work</Badge></a
+              >
+            </div>
+          </h1>
+          <h2 class="text-xl opacity-80 text-wrap">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+            volutpat laoreet libero, sit amet dignissim eros laoreet id. Quisque
+            dapibus libero tempus sem auctor, eu bibendum velit suscipit. Sed
+            ultrices sapien vitae nisl imperdiet fermentum. Donec condimentum
+            ullamcorper metus nec condimentum.
+          </h2>
         </div>
-      </h1>
-      <h2 class="text-xl opacity-80 text-wrap">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean volutpat
-        laoreet libero, sit amet dignissim eros laoreet id. Quisque dapibus
-        libero tempus sem auctor, eu bibendum velit suscipit. Sed ultrices
-        sapien vitae nisl imperdiet fermentum. Donec condimentum ullamcorper
-        metus nec condimentum.
-      </h2>
-
+        <img
+          class="rounded-full size-52 object-cover mb-4 hover:scale-110 transition"
+          src="/public/images/Main.jpg"
+          alt="Pedro photo"
+        />
+      </div>
       <!-- Links -->
-      <nav class="flex gap-x-4 py-4">
+      <nav class="flex gap-x-4 py-4 w-fit">
         <SocialPill
           href="https://www.linkedin.com/in/pedro-rodriguez-albiach-3066222a2/"
           ><LinkedinIcon class="size-6" />Linkedin</SocialPill
@@ -56,12 +62,18 @@ import ExperienceIcon from "../components/atoms/icons/ExperienceIcon.astro.astro
         >
       </nav>
     </SectionContainer>
-    <!-- Second section -->
-    <SectionContainer id="experience" class="gap-10 flex flex-col">
+    <!-- Projects section -->
+    <SectionContainer>
+      <ProjectsCards />
+    </SectionContainer>
+    <!-- Experience section -->
+    <SectionContainer id="experience" class="gap-10 flex flex-col pb-10">
       <h2 class="text-3xl font-bold flex flex-row gap-4 items-center">
         <ExperienceIcon /> Experience
       </h2>
       <Experience />
     </SectionContainer>
+
+    <Footer />
   </main>
 </Layout>
