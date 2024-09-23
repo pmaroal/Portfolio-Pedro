@@ -17,11 +17,11 @@ import ProjectsCards from "../components/molecules/ProjectsCards.astro";
   title="Portfolio Pedro Rodríguez - Desarrollador y programador Web"
   description="Contrata a Pedro Rodríguez para trabajar en tu empresa o proyecto web de forma remota."
 >
-  <main>
+  <main class="flex flex-col gap-24">
     <!-- First section -->
-    <SectionContainer id="about" class="py-44 pb-24">
+    <SectionContainer id="about" class="flex flex-col items-center pt-48">
       <div class="flex gap-4 w-fit">
-        <div class="flex flex-col w-full max-w-[500px]">
+        <div class="flex flex-col w-fit max-w-[500px]">
           <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
             Hey, I'm Pedro <div class="flex justify-center items-center">
               <a
@@ -63,7 +63,7 @@ import ProjectsCards from "../components/molecules/ProjectsCards.astro";
       </nav>
     </SectionContainer>
     <!-- Projects section -->
-    <SectionContainer>
+    <SectionContainer id="projects">
       <ProjectsCards />
     </SectionContainer>
     <!-- Experience section -->
