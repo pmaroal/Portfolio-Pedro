@@ -7,10 +7,11 @@ import SocialPill from "../components/molecules/SocialPill.astro";
 import MailIcon from "../components/atoms/icons/MailIcon.astro";
 import Experience from "../components/molecules/Experience.astro";
 import SectionContainer from "../components/atoms/SectionContainer.astro";
-import ExperienceIcon from "../components/atoms/icons/ExperienceIcon.astro.astro";
+import ExperienceIcon from "../components/atoms/icons/ExperienceIcon.astro";
 import ProjectsIcon from "../components/atoms/icons/ProjectsIcon.astro";
 import Footer from "../components/atoms/Footer.astro";
 import ProjectsCards from "../components/molecules/ProjectsCards.astro";
+import PartnershipsIcon from "../components/atoms/icons/PartnershipsIcon.astro";
 ---
 
 <Layout
@@ -62,8 +63,11 @@ import ProjectsCards from "../components/molecules/ProjectsCards.astro";
         >
       </nav>
     </SectionContainer>
-    <!-- Projects section -->
-    <SectionContainer id="projects">
+    <!-- PartnerShips section -->
+    <SectionContainer id="projects" class="gap-10 flex flex-col pb-10">
+      <h2 class="text-3xl font-bold flex flex-row gap-4 items-center">
+        <PartnershipsIcon class="size-10" />Partnerships
+      </h2>
       <ProjectsCards />
     </SectionContainer>
     <!-- Experience section -->

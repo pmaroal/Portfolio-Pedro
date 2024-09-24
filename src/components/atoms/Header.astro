@@ -1,10 +1,34 @@
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Agrega el evento de scroll
+    window.addEventListener("scroll", () => {
+      const scrollPosition = window.scrollY; // Obtiene la cantidad de desplazamiento vertical
+
+      const header = document.querySelector("header"); // Selecciona el header
+
+      if (header) {
+        // Verifica que el header no sea null
+        if (scrollPosition > 0) {
+          // El usuario ha comenzado a hacer scroll
+          header.classList.add("bg-black/80", "shadow-lg"); // Añade clases para el scroll
+          header.classList.remove("bg-transparent"); // Remueve la clase original
+          // El usuario ha comenzado a hacer scroll
+        } else {
+          // El usuario está en la parte superior de la página
+          header.classList.remove("bg-black/80", "shadow-lg"); // Remueve clases para el scroll
+          header.classList.add("bg-transparent"); // Añade la clase original
+        }
+      }
+    });
+  });
+</script>
+
 <header
-  class="justify-center items-center py-3 w-[1120px] flex flex-row m-auto my-8"
+  class="justify-center items-center py-3 flex flex-row m-auto my-8 fixed top-0 left-0 w-full z-50 translate-y-[-70%] transition-colors duration-300 ease-in-out"
 >
   <nav class="flex gap-20 flex-row opacity-80">
-    <a class="hover:scale-105 transition" href="#top">Home</a>
     <a class="hover:scale-105 transition" href="#experience">Experience</a>
-    <a class="hover:scale-105 transition" href="#about">About me</a>
+    <a class="hover:scale-105 transition" href="#top">About me</a>
     <a class="hover:scale-105 transition" href="#projects">Projects</a>
     <a class="hover:scale-105 transition" href="#contact">Contact</a>
   </nav>
