@@ -1,6 +1,6 @@
 ---
 import Card from "../atoms/Card.astro";
-
+import "swiper/css";
 const PROJECTS = [
   {
     href: "https://adaptasocios.com/",
@@ -40,6 +40,48 @@ const PROJECTS = [
 ];
 ---
 
-<div class="flex flex-wrap gap-6 justify-center">
-  {PROJECTS.map((project) => <Card {...project} />)}
+<div class="swiper">
+  <div class="swiper-wrapper">
+    {
+      PROJECTS.map((project) => (
+        <div class="swiper-slide">
+          <Card {...project} />
+        </div>
+      ))
+    }
+  </div>
 </div>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script is:inline>
+  new Swiper(".swiper");
+  const swiper = new Swiper(".swiper-container", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+  });
+</script>
