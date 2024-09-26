@@ -10,8 +10,10 @@ import SectionContainer from "../components/atoms/SectionContainer.astro";
 import ExperienceIcon from "../components/atoms/icons/ExperienceIcon.astro";
 import ProjectsIcon from "../components/atoms/icons/ProjectsIcon.astro";
 import Footer from "../components/atoms/Footer.astro";
-import ProjectsCards from "../components/molecules/ProjectsCards.astro";
+import ProjectsCards from "../components/molecules/Partnerships.astro";
 import PartnershipsIcon from "../components/atoms/icons/PartnershipsIcon.astro";
+import Projects from "../components/molecules/Projects.astro";
+import Partnerships from "../components/molecules/Partnerships.astro";
 ---
 
 <Layout
@@ -19,8 +21,11 @@ import PartnershipsIcon from "../components/atoms/icons/PartnershipsIcon.astro";
   description="Contrata a Pedro Rodríguez para trabajar en tu empresa o proyecto web de forma remota."
 >
   <main class="flex flex-col gap-24">
-    <!-- First section -->
-    <SectionContainer id="about" class="flex flex-col items-center pt-48">
+    <!-- ---------------------------------------- About me section ---------------------------------------- -->
+    <SectionContainer
+      id="about"
+      class="flex flex-col items-center h-screen gap-10 justify-center"
+    >
       <div class="flex gap-4 w-fit">
         <div class="flex flex-col w-fit max-w-[500px]">
           <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
@@ -35,7 +40,7 @@ import PartnershipsIcon from "../components/atoms/icons/PartnershipsIcon.astro";
               >
             </div>
           </h1>
-          <h2 class="text-xl opacity-80 text-wrap">
+          <h2 class="text-xl opacity-80">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
             volutpat laoreet libero, sit amet dignissim eros laoreet id. Quisque
             dapibus libero tempus sem auctor, eu bibendum velit suscipit. Sed
@@ -50,7 +55,7 @@ import PartnershipsIcon from "../components/atoms/icons/PartnershipsIcon.astro";
         />
       </div>
       <!-- Links -->
-      <nav class="flex gap-x-4 py-4 w-fit">
+      <nav class="flex gap-x-4">
         <SocialPill
           href="https://www.linkedin.com/in/pedro-rodriguez-albiach-3066222a2/"
           ><LinkedinIcon class="size-6" />Linkedin</SocialPill
@@ -63,28 +68,30 @@ import PartnershipsIcon from "../components/atoms/icons/PartnershipsIcon.astro";
         >
       </nav>
     </SectionContainer>
-    <!-- Personal projects section -->
-    <SectionContainer id="personalProjects" class="gap-10 flex flex-col pb-10">
+    <!-- ---------------------------------------- Personal projects section ------------------------------------------ -->
+    <SectionContainer id="projects" class="gap-10 flex flex-col pt-14">
       <h2 class="text-3xl font-bold flex flex-row gap-4 items-center">
-        <PartnershipsIcon class="size-10" />Personal projects
+        <ProjectsIcon class="size-10" />Personal projects
       </h2>
-      <ProjectsCards />
+      <Projects />
     </SectionContainer>
-    <!-- PartnerShips section -->
-    <SectionContainer id="partnerships" class="gap-10 flex flex-col pb-10">
+    <!-- ---------------------------------------- PartnerShips section ---------------------------------------- -->
+    <SectionContainer id="partnerships" class="gap-10 flex flex-col">
       <h2 class="text-3xl font-bold flex flex-row gap-4 items-center">
         <PartnershipsIcon class="size-10" />Partnerships
       </h2>
-      <ProjectsCards />
+      <Partnerships />
     </SectionContainer>
 
-    <!-- Experience section -->
-    <SectionContainer id="experience" class="gap-10 flex flex-col pb-10">
+    <!-- ---------------------------------------- Experience section ---------------------------------------- -->
+    <SectionContainer id="experience" class="gap-10 flex flex-col">
       <h2 class="text-3xl font-bold flex flex-row gap-4 items-center">
         <ExperienceIcon /> Experience
       </h2>
       <Experience />
     </SectionContainer>
+
+    <!-- ---------------------------------------- Footer section ---------------------------------------- -->
 
     <Footer />
   </main>
