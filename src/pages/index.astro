@@ -26,12 +26,12 @@ import { Image } from "astro:assets";
       class="flex flex-col items-center h-screen gap-10 justify-center sm:pt-0 pt-20"
     >
       <div class="flex w-fit flex-col-reverse sm:flex-row">
-        <div class="flex flex-col max-w-[500px] sm:gap-0 gap-10">
+        <div class="flex flex-col max-w-[500px] sm:gap-0 gap-7">
           <div
-            class="flex flex-wrap sm:flex-row sm:gap-5 gap-3 items-center justify-center"
+            class="flex lg:flex-row flex-col sm:flex-row sm:gap-5 gap-3 items-center justify-center"
           >
             <h1
-              class="text-white text-5xl font-bold flex flex-col sm:flex-row gap-x-4 sm:py-10"
+              class="text-white text-3xl lg:text-5xl font-bold flex flex-col sm:flex-row py-3 sm:py-10"
             >
               Hey, I'm Pedro
             </h1>
@@ -45,7 +45,7 @@ import { Image } from "astro:assets";
             >
           </div>
 
-          <h2 class="text-xl opacity-80">
+          <h2 class="text-xl text-center lg:text-left opacity-80">
             Después de años preguntándome cómo funcionan las aplicaciones y las
             webs que usamos a diario, decidí dar el salto hacia la programación.
             Ahora, me dedico a crear soluciones digitales que combinan
@@ -54,13 +54,13 @@ import { Image } from "astro:assets";
           </h2>
         </div>
         <img
-          class="size-28 object-cover hover:scale-110 transition rounded-full h-fit m-auto sm:m-0 max-h-28"
+          class="lg:size-28 size-20 object-cover hover:scale-110 transition rounded-full m-auto sm:m-0"
           src="/images/Main.webp"
           alt="Pedro photo"
         />
       </div>
       <!-- Links -->
-      <nav class="flex -translate-x-24 gap-x-4">
+      <nav class="flex lg:-translate-x-24 gap-x-4 lg:pl-0 pl-3">
         <SocialPill
           href="https://www.linkedin.com/in/pedro-rodriguez-albiach-3066222a2/"
           ><LinkedinIcon class="size-6" />Linkedin</SocialPill
