@@ -13,13 +13,15 @@ import PartnershipsIcon from "../components/atoms/icons/PartnershipsIcon.astro";
 import Projects from "../components/molecules/Projects.astro";
 import Partnerships from "../components/molecules/Partnerships.astro";
 import { Image } from "astro:assets";
+import Technologies from "../components/molecules/Technologies.astro";
+import TechnologiesIcon from "../components/atoms/icons/TechnologiesIcon.astro";
 ---
 
 <Layout
   title="Portfolio Pedro Rodríguez - Desarrollador y programador Web"
   description="Contrata a Pedro Rodríguez para trabajar en tu empresa."
 >
-  <main class="flex flex-col gap-14 md:gap-24">
+  <main class="flex flex-col gap-14 md:gap-36">
     <!-- ---------------------------------------- About me section ---------------------------------------- -->
     <SectionContainer
       id="about"
@@ -81,7 +83,7 @@ import { Image } from "astro:assets";
       </nav>
     </SectionContainer>
     <!-- ---------------------------------------- Personal projects section ------------------------------------------ -->
-    <SectionContainer id="projects" class="gap-10 flex flex-col sm:pt-14">
+    <SectionContainer id="projects" class="gap-10 flex flex-col">
       <h2 class="text-3xl font-bold flex flex-row gap-4 items-center">
         <ProjectsIcon class="size-10" />Personal projects
       </h2>
@@ -96,7 +98,15 @@ import { Image } from "astro:assets";
       </h2>
       <Partnerships />
     </SectionContainer>
-
+    <!-- ---------------------------------------- Technologies section ---------------------------------------- -->
+    <SectionContainer id="technologies" class="gap-10 flex flex-col">
+      <h2
+        class="text-3xl font-bold flex flex-row gap-4 items-center justify-center md:justify-normal"
+      >
+        <TechnologiesIcon class="size-6" />Technologies
+      </h2>
+      <Technologies />
+    </SectionContainer>
     <!-- ---------------------------------------- Experience section ---------------------------------------- -->
     <SectionContainer id="experience" class="gap-10 flex flex-col">
       <h2 class="text-3xl font-bold flex flex-row gap-4 items-center">
