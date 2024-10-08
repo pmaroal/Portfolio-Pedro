@@ -50,16 +50,11 @@ import TechnologiesIcon from "../components/atoms/icons/TechnologiesIcon.astro";
           <h2
             class="text-xl text-center opacity-80 sm:text-balance sm:text-left"
           >
-            <!-- Después de años preguntándome cómo funcionan las aplicaciones y las
-            webs que usamos a diario, decidí dar el salto hacia la programación.
-            Ahora, me dedico a crear soluciones digitales que combinan
-            creatividad y funcionalidad, con el objetivo de seguir aprendiendo y
-            evolucionando en este fascinante mundo del desarrollo web. -->
-            After years of wondering how the applications and websites we use every
-            day work, I decided to take the leap into programming. Now, I am dedicated
-            to create digital solutions that combine creativity and functionality,
-            with the goal of continuing to learn and evolve in this fascinating world
-            of web development.
+            After years of wondering how the applications and websites we use
+            every day work, I decided to take the leap into programming. Now, I
+            am dedicated to create digital solutions that combine creativity and
+            functionality, with the goal of continuing to learn and evolve in
+            this fascinating world of web development.
           </h2>
         </div>
         <img
@@ -77,7 +72,7 @@ import TechnologiesIcon from "../components/atoms/icons/TechnologiesIcon.astro";
         <SocialPill href="https://github.com/pmaroal"
           ><GithubIcon class="size-6" />GitHub</SocialPill
         >
-        <SocialPill href="https://github.com/pmaroal"
+        <SocialPill id="copy-email" href="https://github.com/pmaroal"
           ><MailIcon class="size-6" />Mail</SocialPill
         >
       </nav>
@@ -116,3 +111,32 @@ import TechnologiesIcon from "../components/atoms/icons/TechnologiesIcon.astro";
     </SectionContainer>
   </main>
 </Layout>
+
+<script>
+  document
+    .getElementById("copy-email")
+    ?.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      // El correo que quieres copiar
+      const email = "pedro.maroal@gmail.com";
+
+      // Crear un campo de texto temporal
+      const tempInput = document.createElement("input");
+      tempInput.value = email;
+      document.body.appendChild(tempInput);
+
+      // Seleccionar el texto del campo temporal
+      tempInput.select();
+      tempInput.setSelectionRange(0, 99999); // Para móviles
+
+      // Copiar el texto seleccionado al portapapeles
+      document.execCommand("copy");
+
+      // Eliminar el campo de texto temporal
+      document.body.removeChild(tempInput);
+
+      // Mostrar una alerta o mensaje de confirmación si deseas
+      alert("Correo copiado al portapapeles: " + email);
+    });
+</script>
