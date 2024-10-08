@@ -54,7 +54,7 @@ const PROJECTS = [
     <div class="swiper-wrapper">
       {
         PROJECTS.map((project) => (
-          <div class="swiper-slide">
+          <div class="swiper-slide pl-4">
             <Card {...project} />
           </div>
         ))
@@ -70,15 +70,12 @@ const PROJECTS = [
     loop: true,
     breakpoints: {
       // Cuando el ancho de pantalla sea de 1024px o más
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 10,
+      700: { slidesPerView: 3 },
+      //Para pantallas más pequeñas
+      500: {
+        slidesPerView: 2,
       },
-      // Para pantallas más pequeñas
-      0: {
-        slidesPerView: 1,
-        spaceBetween: 0,
-      },
+      0: { slidesPerView: 1 },
     },
     navigation: {
       nextEl: ".multiple-slide-carousel .swiper-button-next",
