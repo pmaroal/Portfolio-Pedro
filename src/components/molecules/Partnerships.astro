@@ -1,6 +1,5 @@
 ---
 import Card from "../atoms/Card.astro";
-import "swiper/css";
 const PROJECTS = [
   {
     href: "https://adaptasocios.com/",
@@ -47,39 +46,6 @@ const PROJECTS = [
 ];
 ---
 
-<div class="w-full relative">
-  <div
-    class="swiper multiple-slide-carousel swiper-container relative text-gray-600"
-  >
-    <div class="swiper-wrapper">
-      {
-        PROJECTS.map((project) => (
-          <div class="swiper-slide pl-4">
-            <Card {...project} />
-          </div>
-        ))
-      }
-    </div>
-  </div>
+<div class="flex flex-wrap justify-center gap-10">
+  {PROJECTS.map((project) => <Card {...project} />)}
 </div>
-
-<script>
-  import Swiper from "swiper";
-
-  var swiper = new Swiper(".multiple-slide-carousel", {
-    loop: true,
-    breakpoints: {
-      // Cuando el ancho de pantalla sea de 1024px o más
-      700: { slidesPerView: 3 },
-      //Para pantallas más pequeñas
-      500: {
-        slidesPerView: 2,
-      },
-      0: { slidesPerView: 1 },
-    },
-    navigation: {
-      nextEl: ".multiple-slide-carousel .swiper-button-next",
-      prevEl: ".multiple-slide-carousel .swiper-button-prev",
-    },
-  });
-</script>
