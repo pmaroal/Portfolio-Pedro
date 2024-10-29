@@ -77,12 +77,14 @@ import TechnologiesIcon from "../components/atoms/icons/TechnologiesIcon.astro";
         >
       </nav>
     </SectionContainer>
-    <!-- ---------------------------------------- Personal projects section ------------------------------------------ -->
-    <SectionContainer id="projects" class="gap-10 flex flex-col">
-      <h2 class="text-3xl font-bold flex flex-row gap-4 items-center">
-        <ProjectsIcon class="size-10" />Personal projects
+    <!-- ---------------------------------------- Technologies section ---------------------------------------- -->
+    <SectionContainer id="technologies" class="gap-10 flex flex-col">
+      <h2
+        class="text-3xl font-bold flex flex-row gap-4 items-center justify-center md:justify-normal"
+      >
+        <TechnologiesIcon class="size-6" />Technologies
       </h2>
-      <Projects />
+      <Technologies />
     </SectionContainer>
     <!-- ---------------------------------------- PartnerShips section ---------------------------------------- -->
     <SectionContainer id="partnerships" class="gap-10 flex flex-col">
@@ -93,21 +95,20 @@ import TechnologiesIcon from "../components/atoms/icons/TechnologiesIcon.astro";
       </h2>
       <Partnerships />
     </SectionContainer>
-    <!-- ---------------------------------------- Technologies section ---------------------------------------- -->
-    <SectionContainer id="technologies" class="gap-10 flex flex-col">
-      <h2
-        class="text-3xl font-bold flex flex-row gap-4 items-center justify-center md:justify-normal"
-      >
-        <TechnologiesIcon class="size-6" />Technologies
-      </h2>
-      <Technologies />
-    </SectionContainer>
+
     <!-- ---------------------------------------- Experience section ---------------------------------------- -->
     <SectionContainer id="experience" class="gap-10 flex flex-col">
       <h2 class="text-3xl font-bold flex flex-row gap-4 items-center">
         <ExperienceIcon /> Experience
       </h2>
       <Experience />
+    </SectionContainer>
+    <!-- ---------------------------------------- Personal projects section ------------------------------------------ -->
+    <SectionContainer id="projects" class="gap-10 flex flex-col">
+      <h2 class="text-3xl font-bold flex flex-row gap-4 items-center">
+        <ProjectsIcon class="size-10" />Personal projects
+      </h2>
+      <Projects />
     </SectionContainer>
   </main>
 </Layout>
