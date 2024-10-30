@@ -1,19 +1,18 @@
 ---
-import Css from "../atoms/icons/Css.astro";
-import GithubIcon from "../atoms/icons/GithubIcon.astro";
-import GitIcon from "../atoms/icons/GitIcon.astro";
-import Html from "../atoms/icons/Html.astro";
+import AstroIcon from "../atoms/icons/AstroIcon.astro";
 import JavaScript from "../atoms/icons/JavaScript.astro";
-import Node from "../atoms/icons/Node.astro";
+import ReactIcon from "../atoms/icons/ReactIcon.astro";
 import Tailwind from "../atoms/icons/Tailwind.astro";
+import TypeScript from "../atoms/icons/TypeScript.astro";
 ---
 
 <div class="flex flex-wrap gap-6 sm:gap-0 sm:justify-between justify-center">
+  <div><ReactIcon class="m-auto" />React</div>
+
+  <div><TypeScript class="m-auto" />TypeScript</div>
+
   <div><JavaScript class="m-auto" />JavaScript</div>
-  <div><Html class="m-auto" />Html</div>
-  <div class="text-center"><Css class="m-auto" />Css</div>
+
+  <div><AstroIcon class="m-auto" />Astro</div>
   <div><Tailwind class="m-auto" />Tailwind</div>
-  <div><Node class="m-auto" />NodeJs</div>
-  <div class="text-center"><GitIcon class="m-auto" />Git</div>
-  <div><GithubIcon class="m-auto w-10 h-10" />Github</div>
 </div>
