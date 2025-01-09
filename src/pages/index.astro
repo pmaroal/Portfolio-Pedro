@@ -25,9 +25,30 @@ import TechnologiesIcon from "../components/atoms/icons/TechnologiesIcon.astro";
     <!-- ---------------------------------------- About me section ---------------------------------------- -->
     <SectionContainer
       id="about"
-      class="flex flex-col items-center h-screen gap-10 justify-center sm:pt-0 pt-20"
+      class="flex flex-col items-center h-screen gap-10 justify-center sm:pt-20 pt-32"
     >
-      <div class="flex w-fit flex-col-reverse sm:flex-row">
+      <div class="flex w-fit flex-col">
+        <div class="flex sm:flex-row flex-col items-end sm:translate-x-16">
+          <picture
+            class="rounded-full sm:size-60 size-40 overflow-hidden block mx-auto"
+          >
+            <img
+              class="hover:scale-125 ease-in duration-150"
+              src="/images/Foto-cuadrada.webp"
+              alt="Pedro photo"
+            />
+          </picture>
+
+          <a
+            href="https://www.linkedin.com/in/pedro-rodriguez-albiach-3066222a2/"
+            target="_blank"
+            class="flex h-fit"
+            rel="noopener"
+          >
+            <Badge>Available to work</Badge></a
+          >
+        </div>
+
         <div class="flex flex-col max-w-[500px] sm:gap-0 gap-7">
           <div
             class="flex sm:flex-row flex-col sm:gap-5 gap-3 items-center justify-center"
@@ -37,14 +58,6 @@ import TechnologiesIcon from "../components/atoms/icons/TechnologiesIcon.astro";
             >
               Hey, I'm Pedro
             </h1>
-            <a
-              href="https://www.linkedin.com/in/pedro-rodriguez-albiach-3066222a2/"
-              target="_blank"
-              class="flex justify-center items-center"
-              rel="noopener"
-            >
-              <Badge>Available to work</Badge></a
-            >
           </div>
 
           <h2
@@ -57,16 +70,9 @@ import TechnologiesIcon from "../components/atoms/icons/TechnologiesIcon.astro";
             this fascinating world of web development.
           </h2>
         </div>
-        <picture class="rounded-full size-32 overflow-hidden block mx-auto">
-          <img
-            class="hover:scale-125 ease-in duration-150"
-            src="/images/Foto-cuadrada.webp"
-            alt="Pedro photo"
-          />
-        </picture>
       </div>
       <!-- Links -->
-      <nav class="flex sm:-translate-x-24 gap-x-4">
+      <nav class="flex gap-x-4">
         <SocialPill
           href="https://www.linkedin.com/in/pedro-rodriguez-albiach-3066222a2/"
           ><LinkedinIcon class="size-6" />Linkedin</SocialPill
