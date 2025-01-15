@@ -3,12 +3,13 @@ import Card from "../atoms/Card.astro";
 import "swiper/css";
 const PROJECTS = [
   {
+    href: "https://coffeeblogmaroal.netlify.app/",
     alt: "project1",
-
     image: " /images/personalProjects/blogDeCafe.png",
     title: "Project 1",
   },
   {
+    href: "https://festivalmusicatechno.netlify.app/",
     alt: "project1",
     image: "/images/personalProjects/festival.png",
     title: "Project 2",
@@ -31,43 +32,6 @@ const PROJECTS = [
 ];
 ---
 
-<div class="w-full relative">
-  <div class="swiper multiple-slide-carousel swiper-container relative">
-    <div class="swiper-wrapper mb-16">
-      {
-        PROJECTS.map((project) => (
-          <div class="swiper-slide">
-            <Card {...project} />
-          </div>
-        ))
-      }
-    </div>
-  </div>
+<div class="flex flex-wrap justify-center gap-10">
+  {PROJECTS.map((project) => <Card {...project} />)}
 </div>
-<script>
-  import Swiper from "swiper";
-
-  var swiper = new Swiper(".multiple-slide-carousel", {
-    loop: false,
-    slidesPerView: 3,
-    spaceBetween: 0,
-    navigation: {
-      nextEl: ".multiple-slide-carousel .swiper-button-next",
-      prevEl: ".multiple-slide-carousel .swiper-button-prev",
-    },
-    breakpoints: {
-      1920: {
-        slidesPerView: 3,
-        spaceBetween: 0,
-      },
-      1028: {
-        slidesPerView: 3,
-        spaceBetween: 0,
-      },
-      990: {
-        slidesPerView: 3,
-        spaceBetween: 0,
-      },
-    },
-  });
-</script>
