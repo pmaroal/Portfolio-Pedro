@@ -1,0 +1,27 @@
+---
+import GithubIcon from "../atoms/icons/GithubIcon.astro";
+import UrlIcon from "../atoms/icons/UrlIcon.astro";
+
+interface Props {
+  name: string;
+  size?: string;
+  url?: string;
+}
+
+const { name, size, url } = Astro.props;
+
+const IconComponents = {
+  GitHub: GithubIcon,
+  Url: UrlIcon,
+};
+
+const SelectedIcon = IconComponents[name];
+---
+
+{
+  SelectedIcon ? (
+    <SelectedIcon class={size} href={url} />
+  ) : (
+    <span>Icon not found</span>
+  )
+}

@@ -1,14 +1,27 @@
 ---
-import { Image } from "astro:assets";
+import Icon from "../molecules/Icon.astro";
+
 interface Props {
   href?: string;
+  github?: string;
   alt: string;
   image: string | null;
   title: string;
   partner?: boolean;
 }
 
-const { href, image, title, alt, partner } = Astro.props;
+const { href, github, image, title, alt, partner } = Astro.props;
+
+const Icons = [
+  {
+    name: "GitHub",
+    size: "size-8",
+  },
+  {
+    name: "Url",
+    size: "size-8",
+  },
+];
 
 const card =
   "flex flex-col items-center w-fit max-w-[300px] border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 transform transition-transform duration-300 ease-in-out hover:scale-105 dark:hover:bg-gray-700";
@@ -43,9 +56,13 @@ const typeClasses = partner;
           <h5 class="mb-2 text-xl lg:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             {title}
           </h5>
-          <p class="text-sm lg:text-base text-gray-600 dark:text-gray-400">
-            Additional content for non-partner cards.
-          </p>
+          <div>
+            <a href={github} class="flex flex-row gap-10 w-fit ">
+              {Icons.map((icon) => (
+                <Icon {...icon} />
+              ))}
+            </a>
+          </div>
         </div>
       )
     }
