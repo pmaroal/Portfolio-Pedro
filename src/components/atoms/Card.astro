@@ -55,11 +55,13 @@ const typeClasses = partner;
           {title}
         </h5>
         <div>
-          <a href={github} class="flex flex-row gap-10 w-fit">
+          <div class="flex flex-row gap-10 w-fit">
             {Icons.map((icon) => (
-              <Icon {...icon} />
+              <a href={icon.name === "GitHub" ? github : href} target="_blank">
+                <Icon {...icon} />
+              </a>
             ))}
-          </a>
+          </div>
         </div>
       </div>
     </div>
