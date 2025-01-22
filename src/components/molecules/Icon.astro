@@ -20,7 +20,9 @@ const SelectedIcon = IconComponents[name];
 
 {
   SelectedIcon ? (
-    <SelectedIcon class={size} href={url} />
+    <div class="flex flex-row gap-4 items-center justify-center">
+      <SelectedIcon class={size} href={url} />
+    </div>
   ) : (
     <span>Icon not found</span>
   )
